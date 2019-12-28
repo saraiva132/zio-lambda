@@ -1,7 +1,6 @@
 package zio.aws.lambda
 
-import com.softwaremill.sttp.{ Response => SResponse }
-import scala.util.Try
+import sttp.client.{ Response => SResponse }
 
 final case class Request(
   /** The request ID, which identifies the request that triggered the function invocation. */

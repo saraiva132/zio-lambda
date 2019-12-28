@@ -1,6 +1,7 @@
 package zio.aws
 
-import com.softwaremill.sttp.{ Response => SResponse, Uri }
+import sttp.client.{ Response => SResponse }
+import sttp.model.Uri
 import java.time.ZoneId
 import zio.ZIO
 import zio.system.System

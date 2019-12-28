@@ -2,6 +2,7 @@ package zio.aws.lambda
 
 import zio.clock.Clock
 import zio.aws.lambda.services._
+import zio.aws.lambda.environment.Environment
 
 trait Runtime extends Clock {
   def env: Environment.Service[Any]

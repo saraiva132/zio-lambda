@@ -1,6 +1,6 @@
 package zio.aws.lambda
 
-import com.softwaremill.sttp.{ Response => SResponse }
+import sttp.client.{ Response => SResponse }
 
 sealed abstract class Error extends Product with Serializable { self =>
   final def toThrowable: Throwable = self match {

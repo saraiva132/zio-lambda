@@ -1,5 +1,8 @@
 package zio.aws.lambda
 
+import zio.ZIO
+import software.amazon.awssdk.regions.Region
+
 package object environment {
   def handler: ZIO[Environment, Error, String]               = ZIO.accessM(_.environment.handler)
   def region: ZIO[Environment, Error, Region]                = ZIO.accessM(_.environment.region)

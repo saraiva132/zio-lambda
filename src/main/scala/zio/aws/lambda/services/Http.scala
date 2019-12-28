@@ -1,7 +1,8 @@
 package zio.aws.lambda.services
 
-import com.softwaremill.sttp.{ Response => SResponse, _ }
-import com.softwaremill.sttp.asynchttpclient.zio._
+import sttp.client.{ Response => SResponse, _ }
+import sttp.client.asynchttpclient.zio._
+import sttp.model.Uri
 import scala.concurrent.duration._
 import scala.sys.process._
 import zio.{ UIO, ZIO }

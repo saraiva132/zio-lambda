@@ -1,6 +1,6 @@
 package zio.aws.lambda
 
-import com.softwaremill.sttp._
+import sttp.client._
 import zio._
 import zio.clock.Clock
 import zio.duration.Duration
@@ -60,7 +60,7 @@ abstract class ZLambda extends App with CustomRuntimeApi {
    */
   final val acquire: ZIO[System, Error, (Resources, Runtime)] =
     (for {
-      env    <- zio.aws.lambda.services.Environment.fromEnvironment
+      env    <- zio.aws.lambda.environment.Environment.fromEnvironment
       logger <- Logging.fromCloudWatch.provide(env)
     } yield Runtime(env.lambdaEnv, logger.logger)) >>= (
       rt => resources.provide(rt).map((_, rt))

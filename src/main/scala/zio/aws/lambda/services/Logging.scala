@@ -4,7 +4,6 @@ import software.amazon.awssdk.services.cloudwatchlogs.CloudWatchLogsAsyncClient
 import software.amazon.awssdk.services.cloudwatchlogs.model.{ InputLogEvent, PutLogEventsRequest }
 import software.amazon.awssdk.auth.credentials.{ AwsSessionCredentials, StaticCredentialsProvider }
 import zio.{ Task, ZIO }
-import zio.interop.javaconcurrent._
 import zio.aws.lambda._
 
 trait Logging extends Serializable {
