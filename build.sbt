@@ -5,7 +5,7 @@ inThisBuild(
   List(
     organization := "dev.zio",
     organizationName := "ZIO",
-    homepage := Some (url("https://github.com/zio/zio-lambda")),
+    homepage := Some(url("https://github.com/zio/zio-lambda")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     scalaVersion := mainScala,
     crossScalaVersions := allScala,
