@@ -1,6 +1,6 @@
 package zio.aws.lambda
 
-import scalaz.zio.clock.Clock
+import zio.clock.Clock
 import zio.aws.lambda.services._
 
 trait Runtime extends Clock {
@@ -12,9 +12,9 @@ trait Runtime extends Clock {
 object Runtime {
   def apply(env0: Environment.Service[Any], logger0: Logging.Service[Any]): Runtime =
     new Runtime {
-      val env = env0
-      val http = Http.Live.http
+      val env    = env0
+      val http   = Http.Live.http
       val logger = logger0
-      val clock = Clock.Live.clock
+      val clock  = Clock.Live.clock
     }
 }
